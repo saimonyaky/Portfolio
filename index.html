@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <h1 class="top_banner">
+            <p class="text_banner">Welcome to my website</p>
+        </h1>
+        <nav class="nav" id="navbar">
+            <a href="" class="nav_logo">Trung</a>
+            <div class="nav_menu" id="nav-menu">
+                <i class="fa fa-close nav_close" id="nav-close"></i>
+                <ul class="nav_list grid">
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active_nav_link">
+                            <i class="fa fa-home nav_icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#about" class="nav_link">
+                            <i class="fa fa-user nav_icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#skills" class="nav_link">
+                            <i class="fa fa-gears nav_icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#services" class="nav_link">
+                            <i class="fa fa-briefcase nav_icon"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#protfolio" class="nav_link">
+                            <i class="fa fa-address-card nav_icon"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#contact" class="nav_link">
+                            <i class="fa fa-location-arrow nav_icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_btns">
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- UP -->
+    <a href="#" class="button btn_flex up_btn" id="scroll-up">
+        <i class="fa fa-angle-double-up btn_icon up_icon"></i>
+    </a>
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <section class="home section" id="home">
+            <div class="home_container container grid">
+                <div class="home_content grid">
+                    <div class="avatar">
+                        <svg class="avatar_area">
+                                <clipPath class="avatar_frame" id="circleView">
+                                    <circle cx="100" cy="100" r="100"/>
+                                </clipPath>
+                            <image class="avatar_img" x="-150" href="img/MetalClusterHopper.png" alt=""
+                                clip-path="url(#circleView)">
+                        </svg>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/nguyễn-văn-trung-018196312/" target="_blank"
+                            class="fa fa-linkedin"></a>
+                        <a href="https://dribbble.com/Saimonyaky" target="_blank" class="fa fa-dribbble"></a>
+                        <a href="https://github.com/saimonyaky" target="_blank" class="fa fa-github"></a>
+                    </div>
+                    <div class="introduce subgrid col-span-2">
+                        <h1 class="introduce_title">Xin chào, Tôi là Trung</h1>
+                        <h3 class="introduce_subtitle">Sinh viên</h3>
+                        <p class="introduce_description">Sinh viên ngành công nghệ thông tin, chuyên ngành công nghệ
+                            phần mềm. Hiện tại đang học tập và làm việc tại Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <h2 class="section_title">Về tôi</h2>
+            <span class="section_subtitle">Giới thiệu</span>
+            <div class="container grid">
+                <img src="./img/about.jpg" alt="" class="about_img">
+                <div class="about_content">
+                    <p class="about_description">Sinh viên ngành công nghệ thông tin tại Học viện Nông nghiệp Việt Nam.
+                        Học và làm việc trong lĩnh vực công nghệ phần mềm tôi đã được trang bị nền tảng kiến thức vững
+                        chắc về cấu trúc dữ liệu và giải thuật. Có thể lập trình hướng đối tượng hoặc lập trình hướng chức năng.</p>
+                    <div class="about_qualification">
+                        <h3 class="section_subtitle">Trình độ chuyên môn</h4>
+                            <div class="qualification_container container">
+                                <div class="qualification_tabs">
+                                    <div class="qualification_caption qualification_active" data-target="#education">
+                                        <i class="fa fa-graduation-cap qualification_icon"></i>Giáo dục
+                                    </div>
+                                    <div class="qualification_caption" data-target="#work">
+                                        <i class="fa fa-briefcase qualification_icon"></i>Công việc
+                                    </div>
+                                </div>
+                                <div class="qualification">
+                                    <!-- EDUCATION -->
+                                    <div class="qualification_content active" data-content id="education">
+                                        <!-- COURSE 1 -->
+                                        <div class="qualification_data">
+                                            <div>
+                                                <h3 class="qualification_title">Công nghệ phầm mềm</h3>
+                                                <span class="qualification_subtitle">VNUA</span>
+                                                <div class="qualification_calendar">
+                                                    <i class="fa fa-calendar qualification_icon"></i>9/2021 - hiện tại
+                                                </div>
+                                            </div>
+                                            <div class="qualification_timeline">
+                                                <span class="timeline_point"></span>
+                                                <span class="timeline_line"></span>
+                                            </div>
+                                        </div>
+                                        <!-- COURSE 2 -->
+                                        <div class="qualification_data">
+                                            <div></div>
+                                            <div class="qualification_timeline">
+                                                <span class="timeline_point"></span>
+                                                <span class="timeline_line"></span>
+                                            </div>
+                                            <div>
+                                                <h3 class="qualification_title">PHP full stack</h3>
+                                                <span class="qualification_subtitle">Devmaster</span>
+                                                <div class="qualification_calendar">
+                                                    <i class="fa fa-calendar qualification_icon"></i>9/2022 - 2/2024
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- COURSE 3 -->
+                                        <div class="qualification_data">
+                                            <div>
+                                                <h3 class="qualification_title">Tiếng Anh giao tiếp</h3>
+                                                <span class="qualification_subtitle">ECORP</span>
+                                                <div class="qualification_calendar">
+                                                    <i class="fa fa-calendar qualification_icon"></i>8/2022 - 12/2023
+                                                </div>
+                                            </div>
+                                            <div class="qualification_timeline">
+                                                <span class="timeline_point"></span>
+                                                <span class="timeline_line"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- WORK -->
+                                    <div class="qualification_content" data-content id="work">
+                                        <p>Chưa có</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+            <h2 class="section_title">Kĩ năng</h2>
+            <span class="section_subtitle">Trình độ kỹ thuật bản thân</span>
+            <div class="skills_container container grid">
+                <!-- SKILL 1 -->
+                <div class="skill_container skills_open">
+                    <div class="skills_header">
+                        <i class='fa fa-terminal skills_icon'></i>
+                        <div class="skills_group-name">
+                            <h1 class="skills_title">Lập trình</h1>
+                            <span class="skills_subtitle">Nhiều hơn 2 năm </span>
+                        </div>
+                        <i class='fa fa-angle-down skills_btn'></i>
+                    </div>
+                    <div class="skills_list grid">
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Ngôn ngữ lập trình</h3>
+                            </div>
+                            <div>
+                                <span class="skills_info">PHP, JavaScript, C#, Java, C++</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Khung chương trình</h3>
+                            </div>
+                            <div>
+                                <span class="skills_info">Laravel, React, Bootstrap, .NET</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Cơ sở dữ liệu</h3>
+                            </div>
+                            <div>
+                                <span class="skills_info">MySQL, SQL server, Microsoft access</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Công cụ hỗ trợ</h3>
+                            </div>
+                            <div>
+                                <span class="skills_info">Github, Visual Studio, XamPP, Eclipse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SKILL 2 -->
+                <div class="skill_container skills_close">
+                    <div class="skills_header">
+                        <i class='fa fa-desktop skills_icon'></i>
+                        <div class="skills_group-name">
+                            <h1 class="skills_title">Tin học văn phòng</h1>
+                            <span class="skills_subtitle">Trung cấp</span>
+                        </div>
+                        <i class='fa fa-angle-down skills_btn'></i>
+                    </div>
+                    <div class="skills_list grid">
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Công cụ cộng tác trực tuyến</h3>
+                            </div>
+                            <div class="">
+                                <span>Google Drive, Zoom, Microsoft Teams.</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Phần mềm Microsoft Office</h3>
+                            </div>
+                            <div class="">
+                                <span>Word, Excel, Powerpoint.</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Thiết kế đồ họa</h3>
+                            </div>
+                            <div class="">
+                                <span>Adobe Photoshop, Canva.</span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Sử dụng tin nhắn</h3>
+                            </div>
+                            <div class="">
+                                <span>Email, Zalo, Messenger.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SKILL 3 -->
+                <div class="skill_container skills_close">
+                    <div class="skills_header">
+                        <i class='fa fa-comments skills_icon'></i>
+                        <div class="skills_group-name">
+                            <h1 class="skills_title">Kĩ năng mềm</h1>
+                            <span class="skills_subtitle">7.6/10</span>
+                        </div>
+                        <i class='fa fa-angle-down skills_btn'></i>
+                    </div>
+                    <div class="skills_list grid">
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Giao tiếp</h3>
+                                <span class="skills_info">8/10</span>
+                            </div>
+                            <div class="skills_bar">
+                                <span class="skills_percentage skills_communication"></span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Thuyết trình</h3>
+                                <span class="skills_info">7.5/10</span>
+                            </div>
+                            <div class="skills_bar">
+                                <span class="skills_percentage skills_present"></span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Giải quyết vấn đề</h3>
+                                <span class="skills_info">8/10</span>
+                            </div>
+                            <div class="skills_bar">
+                                <span class="skills_percentage skills_problem-solving"></span>
+                            </div>
+                        </div>
+                        <div class="skills_content">
+                            <div class="skills_titles">
+                                <h3 class="skills_name">Quản lí thời gian</h3>
+                                <span class="skills_info">7/10</span>
+                            </div>
+                            <div class="skills_bar">
+                                <span class="skills_percentage skills_time-management"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES -->
+        <section class="services section" id="services">
+            <h2 class="section_title">Dịch vụ</h2>
+            <span class="section_subtitle">Những gì tôi cung cấp</span>
+            <div class="services_container container grid">
+                <!-- SERVICERS 1 -->
+                <div class="services_content">
+                    <div class="services_title">
+                        <i class="fa fa-code services_icon"></i>
+                        <h3 class="services_name">Fontend developer</h3>
+                    </div>
+                    <p class="services_description">Build and design the interface, responsive design for different devices, motion animations for actions.</p>
+                    <span class="button services_btn">
+                        Xem thêm
+                        <i class="fa fa-caret-right btn_icon"></i>
+                    </span>
+                    <div class="services_modal">
+                        <div class="modal_content">
+                            <h3 class="modal_title">Fontend developer</h3>
+                            <i class="fa fa-close modal_close"></i>
+                            <ul class="modal_services grid">
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    HTML & CSS Responsive Web Design
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    Javascript Development
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    Node.js & ReactJS Development
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    PSD to Bootstrap Services
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- SERVICERS 2 -->
+                <div class="services_content">
+                    <div class="services_title">
+                        <i class="fa fa-server services_icon"></i>
+                        <h3 class="services_name">Backend developer</h3>
+                    </div>
+                    <p class="services_description">Xử lý các yêu cầu của web, truy cập vào dữ liệu từ cơ sở dữ liệu bằng sử dụng truy vấn SQL, lưu trữ và cập nhật hồ sơ có trong cơ sở dữ liệu</p>
+                    <span class="button services_btn">
+                        Xem thêm
+                        <i class="fa fa-caret-right btn_icon"></i>
+                    </span>
+                    <div class="services_modal">
+                        <div class="modal_content">
+                            <h4 class="modal_title">Backend developer</h4>
+                            <i class="fa fa-close modal_close"></i>
+                            <ul class="modal_services grid">
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    Lập trình hướng đối tượng
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    Lập trình theo mô hình MVC
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    PHP với khung chương trình laravel
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    C# với khung chương trình asp.net & IDE visual studio
+                                </li>
+                                <li class="modal_service">
+                                    <i class="fa fa-check-square-o modal_icon"></i>
+                                    JAVA với IDE eclipse
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PROTFOLIO -->
+        <section class="section portfolio" id="protfolio">
+            <h2 class="section_title">Hồ sơ</h2>
+            <span class="section_subtitle">Một số dự án của tôi</span>
+            <div class="container portfolio_container swiper">
+                <div class="swiper-wrapper">
+                    <div class="portfolio_content swiper-slide">
+                        <div class="portfolio_card grid">
+                            <img src="img/bonsai_web.png" alt="" class="portfolio_img">
+                            <div class="portfolio_data">
+                                <h3 class="portfolio_title">Bonsai Website</h3>
+                                <p class="portfolio_description">Position: Frontend developver.<br>Using HTML5, CSS, Bootstrap, JavaScript, REACTJS.</p>
+                                <a href="#" class="button btn_flex portfolio_btn">
+                                    Source code
+                                    <i class="fa fa-arrow-circle-right btn_icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_content swiper-slide">
+                        <div class="portfolio_card grid">
+                            <img src="img/pc-component_web.png" alt="" class="portfolio_img">
+                            <div class="portfolio_data">
+                                <h3 class="portfolio_title">PC Component Website</h3>
+                                <p class="portfolio_description">Position: Backend developver.<br>Using PHP, Xampp, MySQL, Laravel.</p>
+                                <a href="#" class="button btn_flex portfolio_btn">
+                                    Source code
+                                    <i class="fa fa-arrow-circle-right btn_icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa fa-angle-right portfolio_icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fa fa-angle-left portfolio_icon"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <h2 class="section_title">Liên hệ</h2>
+            <span class="section_subtitle">Thông tin liên lạc</span>
+            <div class="container contact_container grid">
+                <table class="contact_address">
+                    <tr class="contact_info">
+                        <th>
+                            <i class="fa fa-phone-square contact_icon"></i>
+                        </th>
+                        <td>
+                            <h3 class="contact_title">Số điện thoại</h3>
+                            <span class="contact_subtitle">0852 654 116</span>
+                        </td>
+                    </tr>
+                    <tr class="contact_info">
+                        <th>
+                            <i class="fa fa-envelope-square contact_icon"></i>
+                        </th>
+                        <td>
+                            <h3 class="contact_title">Email</h3>
+                            <span class="contact_subtitle">nvtrung1605@gmail.com</span>
+                        </td>
+                    </tr>
+                    <tr class="contact_info">
+                        <th>
+                            <i class="fa fa-map-marker contact_icon"></i>
+                        </th>
+                        <td>
+                            <h3 class="contact_title">Địa chỉ</h3>
+                            <span class="contact_subtitle">Trâu Quỳ - Gia Lâm - Hà Nội</span>
+                        </td>
+                    </tr>
+                </table>
+                <form action="" class="contact_form grid">
+                    <div class="contact_inputs">
+                        <input type="text" class="contact_input" id="name" required>
+                        <label for="name" class="contact_label">Tên</label>
+                    </div>
+                    <div class="contact_inputs">
+                        <input type="text" class="contact_input" id="email" required>
+                        <label for="email" class="contact_label">Email</label>
+                    </div>
+                    <div class="contact_inputs">
+                        <textarea type="text" class="contact_input" id="message" rows="7" required></textarea>
+                        <label for="message" class="contact_label">Message</label>
+                    </div>
+                    <div class="contact_btns">
+                        <button type="reset" class="button btn_flex contact_btn">
+                            Làm lại
+                            <i class="fa fa-refresh btn_icon"></i>
+                        </button>
+                        <button type="submit" class="button btn_flex contact_btn">
+                            Gửi
+                            <i class="fa fa-send btn_icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer_bg">
+            <div class="footer_container container grid">
+                <div class="">
+                    <h2 class="footer_title">Trung</h2>
+                    <span class="footer_subtitle">Nhà phát triển trang web</span>
+                </div>
+                <ul class="footer_links">
+                    <li class="">
+                        <a href="#services" class="footer_link">Services</a>
+                    </li>
+                    <li class="">
+                        <a href="#protfolio" class="footer_link">Portfolio</a>
+                    </li>
+                    <li class="">
+                        <a href="#contact" class="footer_link">Contact</a>
+                    </li>
+                </ul>
+                <div class="social_footer">
+                    <a class="social_item facebook" href="#">
+                        <i class="fa fa-facebook-official social_icon"></i>
+                    </a>
+                    <a class="social_item youtube" href="#">
+                        <i class="fa fa-youtube-play social_icon"></i>
+                    </a>
+                    <a class="social_item twitter" href="#">
+                        <i class="fa fa-twitter social_icon"></i>
+                    </a>
+                    <a class="social_item gg_plus" href="#">
+                        <i class="fa fa-google-plus-official social_icon"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&#169; NVTrung. All right reserved</p>
+        </div>
+    </footer>
+
+    <!-- SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
