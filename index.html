@@ -1,406 +1,640 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <!-- SWIPER -->
+    <title>Văn Trung — Software Developer | Portfolio</title>
+    <meta name="description" content="Portfolio của Nguyễn Văn Trung — Sinh viên CNTT chuyên ngành Công nghệ phần mềm. software developer tại Hà Nội.">
+    <meta name="author" content="Nguyễn Văn Trung">
+    <meta name="keywords" content="web developer, frontend, backend, game developer, portfolio, Trung Nguyen, PHP, Laravel, C#, React, JavaScript">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Văn Trung — Web Developer Portfolio">
+    <meta property="og:description" content="Sinh viên CNTT | software developer | PHP, Laravel, C#, React, JavaScript">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <!-- ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="header" id="header">
-        <h1 class="top_banner">
-            <p class="text_banner">Welcome to my website</p>
-        </h1>
-        <nav class="nav" id="navbar">
-            <a href="" class="nav_logo">Trung</a>
-            <div class="nav_menu" id="nav-menu">
-                <i class="fa fa-close nav_close" id="nav-close"></i>
-                <ul class="nav_list grid">
-                    <li class="nav_item">
-                        <a href="#home" class="nav_link active_nav_link">
-                            <i class="fa fa-home nav_icon"></i> Home
-                        </a>
+    <!-- ===== SKIP LINK (Accessibility) ===== -->
+    <a href="#main-content" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav__container container">
+            <a href="#home" class="nav__logo" aria-label="Trang chủ">
+                <span class="gradient-text">Trung</span><span class="nav__logo-dot">.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <button class="nav__close" id="nav-close" aria-label="Đóng menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Home</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#about" class="nav_link">
-                            <i class="fa fa-user nav_icon"></i> About
-                        </a>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#skills" class="nav_link">
-                            <i class="fa fa-gears nav_icon"></i> Skills
-                        </a>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Skills</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#services" class="nav_link">
-                            <i class="fa fa-briefcase nav_icon"></i> Services
-                        </a>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#protfolio" class="nav_link">
-                            <i class="fa fa-address-card nav_icon"></i> Portfolio
-                        </a>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
                     </li>
-                    <li class="nav_item">
-                        <a href="#contact" class="nav_link">
-                            <i class="fa fa-location-arrow nav_icon"></i> Contact
-                        </a>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="nav_btns">
-                <div class="nav_toggle" id="nav-toggle">
-                    <i class="fa fa-bars"></i>
-                </div>
+            <div class="nav__actions">
+                <button class="nav__theme-toggle" id="theme-toggle" aria-label="Chuyển đổi giao diện sáng/tối">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Mở menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
             </div>
-        </nav>
-    </header>
-    <!-- UP -->
-    <a href="#" class="button btn_flex up_btn" id="scroll-up">
-        <i class="fa fa-angle-double-up btn_icon up_icon"></i>
-    </a>
-    <!-- MAIN -->
-    <main class="main">
-        <!-- HOME -->
-        <section class="home section" id="home">
-            <div class="home_container container grid">
-                <div class="home_content grid">
-                    <div class="avatar">
-                        <svg class="avatar_area">
-                                <clipPath class="avatar_frame" id="circleView">
-                                    <circle cx="100" cy="100" r="100"/>
-                                </clipPath>
-                            <image class="avatar_img" x="-150" href="img/MetalClusterHopper.png" alt=""
-                                clip-path="url(#circleView)">
-                        </svg>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero section" id="home">
+            <div class="hero__bg-glow" aria-hidden="true"></div>
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <p class="hero__greeting reveal">
+                        <span class="hero__wave" aria-hidden="true">👋</span> Xin chào, tôi là
+                    </p>
+                    <h1 class="hero__name reveal reveal-delay-1">
+                        Nguyễn Văn <span class="gradient-text">Trung</span>
+                    </h1>
+                    <div class="hero__title reveal reveal-delay-2">
+                        <span class="typing-text"></span><span class="typing-cursor" aria-hidden="true"></span>
                     </div>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/nguyễn-văn-trung-018196312/" target="_blank"
-                            class="fa fa-linkedin"></a>
-                        <a href="https://dribbble.com/Saimonyaky" target="_blank" class="fa fa-dribbble"></a>
-                        <a href="https://github.com/saimonyaky" target="_blank" class="fa fa-github"></a>
+                    <p class="hero__description reveal reveal-delay-3">
+                        Sinh viên ngành Công nghệ thông tin, chuyên ngành Công nghệ phần mềm.
+                        Đam mê xây dựng các ứng dụng phần mềm hiện đại và trải nghiệm người dùng tuyệt vời.
+                    </p>
+                    <div class="hero__actions reveal reveal-delay-4">
+                        <a href="#portfolio" class="btn btn--primary">
+                            Xem dự án
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn--outline">
+                            Liên hệ
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
                     </div>
-                    <div class="introduce subgrid col-span-2">
-                        <h1 class="introduce_title">Xin chào, Tôi là Trung</h1>
-                        <h3 class="introduce_subtitle">Sinh viên</h3>
-                        <p class="introduce_description">Sinh viên ngành công nghệ thông tin, chuyên ngành công nghệ
-                            phần mềm. Hiện tại đang học tập và làm việc tại Hà Nội</p>
+                    <div class="hero__social reveal reveal-delay-4">
+                        <a href="https://www.linkedin.com/in/nguyễn-văn-trung-018196312/" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://github.com/saimonyaky" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </a>
+                        <a href="https://dribbble.com/Saimonyaky" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="Dribbble">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                        </a>
                     </div>
+                </div>
+                <div class="hero__avatar reveal-scale">
+                    <div class="hero__avatar-ring" aria-hidden="true"></div>
+                    <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/452707134_1899101467256345_5901914705606840616_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFL7U-ecTncQF47j9fHUS-keQ_D5DbjwON5D8PkNuPA4_tUBKmzp-0IB_LCUUg-pktGFniqx3lszH82_zpRh2mB&_nc_ohc=xbe1kz4UTjsQ7kNvwFuO-5m&_nc_oc=AdpVkzmTxgw4miDafoce1Jvn5q4bB62swOuOzIQmPq8o_Ao0OfoVoshvYSx6I7Sr3SOtGs2xD04In1vrNO2BwOr1&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=5q0opuRKUxIkRJbw94Reew&_nc_ss=7b2a8&oh=00_Af_BZJRaKePKqGSI6wgauyqiinX9JKaEUuIf6tWrIeXUaQ&oe=6A27F766" alt="Ảnh đại diện của Trung Nguyễn" class="hero__avatar-img" width="280" height="280">
                 </div>
             </div>
         </section>
-        <!-- ABOUT -->
+
+        <!-- ===== ABOUT SECTION ===== -->
         <section class="about section" id="about">
-            <h2 class="section_title">Về tôi</h2>
-            <span class="section_subtitle">Giới thiệu</span>
-            <div class="container grid">
-                <img src="./img/about.jpg" alt="" class="about_img">
-                <div class="about_content">
-                    <p class="about_description">Sinh viên ngành công nghệ thông tin tại Học viện Nông nghiệp Việt Nam.
-                        Học và làm việc trong lĩnh vực công nghệ phần mềm tôi đã được trang bị nền tảng kiến thức vững
-                        chắc về cấu trúc dữ liệu và giải thuật. Có thể lập trình hướng đối tượng hoặc lập trình hướng chức năng.</p>
-                    <div class="about_qualification">
-                        <h3 class="section_subtitle">Trình độ chuyên môn</h4>
-                            <div class="qualification_container container">
-                                <div class="qualification_tabs">
-                                    <div class="qualification_caption qualification_active" data-target="#education">
-                                        <i class="fa fa-graduation-cap qualification_icon"></i>Giáo dục
-                                    </div>
-                                    <div class="qualification_caption" data-target="#work">
-                                        <i class="fa fa-briefcase qualification_icon"></i>Công việc
+            <h2 class="section__title reveal">
+                <span class="gradient-text">Về tôi</span>
+            </h2>
+            <p class="section__subtitle reveal">Giới thiệu bản thân</p>
+
+            <div class="about__container container grid">
+                <div>
+                    <div class="about__img-wrapper reveal-left">
+                        <img src="img/about1.jpg" alt="Ảnh giới thiệu" class="about__img" loading="lazy" width="400" height="500">
+                    </div>
+                    <div class="about__img-wrapper reveal-left">
+                        <img src="img/about2.png" alt="Ảnh giới thiệu" class="about__img" loading="lazy" width="400" height="500">
+                    </div>
+                </div>
+                
+                <div class="about__content">
+                    <p class="about__description reveal-right">
+                        Sinh viên ngành Công nghệ thông tin tại Học viện Nông nghiệp Việt Nam.
+                        Học và làm việc trong lĩnh vực công nghệ phần mềm, tôi đã được trang bị nền tảng kiến thức
+                        vững chắc về cấu trúc dữ liệu và giải thuật. Có khả năng lập trình hướng đối tượng
+                        và lập trình hướng chức năng.
+                    </p>
+
+                    <div class="about__info reveal-right reveal-delay-1">
+                        <div class="about__info-item">
+                            <span class="about__info-number gradient-text">2+</span>
+                            <span class="about__info-label">Năm kinh nghiệm</span>
+                        </div>
+                        <div class="about__info-item">
+                            <span class="about__info-number gradient-text">5+</span>
+                            <span class="about__info-label">Dự án hoàn thành</span>
+                        </div>
+                        <div class="about__info-item">
+                            <span class="about__info-number gradient-text">3</span>
+                            <span class="about__info-label">Chứng chỉ</span>
+                        </div>
+                    </div>
+
+                    <!-- Qualification -->
+                    <div class="about__qualification reveal-right reveal-delay-2">
+                        <h3 class="qualification__section-title">Trình độ chuyên môn</h3>
+
+                        <div class="qualification__tabs">
+                            <button class="qualification__tab active" data-target="#education" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
+                                Giáo dục
+                            </button>
+                            <button class="qualification__tab" data-target="#work" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                Công việc
+                            </button>
+                        </div>
+
+                        <!-- Education Content -->
+                        <div class="qualification__content active" id="education">
+                            <div class="qualification__data">
+                                <div class="qualification__item">
+                                    <h4 class="qualification__title">Công nghệ phần mềm</h4>
+                                    <span class="qualification__subtitle">VNUA — Học viện Nông nghiệp Việt Nam</span>
+                                    <div class="qualification__calendar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        9/2021 — 1/2026
                                     </div>
                                 </div>
-                                <div class="qualification">
-                                    <!-- EDUCATION -->
-                                    <div class="qualification_content active" data-content id="education">
-                                        <!-- COURSE 1 -->
-                                        <div class="qualification_data">
-                                            <div>
-                                                <h3 class="qualification_title">Công nghệ phầm mềm</h3>
-                                                <span class="qualification_subtitle">VNUA</span>
-                                                <div class="qualification_calendar">
-                                                    <i class="fa fa-calendar qualification_icon"></i>9/2021 - hiện tại
-                                                </div>
-                                            </div>
-                                            <div class="qualification_timeline">
-                                                <span class="timeline_point"></span>
-                                                <span class="timeline_line"></span>
-                                            </div>
-                                        </div>
-                                        <!-- COURSE 2 -->
-                                        <div class="qualification_data">
-                                            <div></div>
-                                            <div class="qualification_timeline">
-                                                <span class="timeline_point"></span>
-                                                <span class="timeline_line"></span>
-                                            </div>
-                                            <div>
-                                                <h3 class="qualification_title">PHP full stack</h3>
-                                                <span class="qualification_subtitle">Devmaster</span>
-                                                <div class="qualification_calendar">
-                                                    <i class="fa fa-calendar qualification_icon"></i>9/2022 - 2/2024
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- COURSE 3 -->
-                                        <div class="qualification_data">
-                                            <div>
-                                                <h3 class="qualification_title">Tiếng Anh giao tiếp</h3>
-                                                <span class="qualification_subtitle">ECORP</span>
-                                                <div class="qualification_calendar">
-                                                    <i class="fa fa-calendar qualification_icon"></i>8/2022 - 12/2023
-                                                </div>
-                                            </div>
-                                            <div class="qualification_timeline">
-                                                <span class="timeline_point"></span>
-                                                <span class="timeline_line"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- WORK -->
-                                    <div class="qualification_content" data-content id="work">
-                                        <p>Chưa có</p>
+                                <div class="qualification__timeline">
+                                    <span class="timeline__point"></span>
+                                    <span class="timeline__line"></span>
+                                </div>
+                                <div></div>
+                            </div>
+
+                            <div class="qualification__data">
+                                <div></div>
+                                <div class="qualification__timeline">
+                                    <span class="timeline__point"></span>
+                                    <span class="timeline__line"></span>
+                                </div>
+                                <div class="qualification__item">
+                                    <h4 class="qualification__title">PHP Full Stack</h4>
+                                    <span class="qualification__subtitle">Devmaster Academy</span>
+                                    <div class="qualification__calendar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        9/2022 — 2/2024
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="qualification__data">
+                                <div class="qualification__item">
+                                    <h4 class="qualification__title">Tiếng Anh giao tiếp</h4>
+                                    <span class="qualification__subtitle">ECORP English</span>
+                                    <div class="qualification__calendar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        8/2022 — 12/2023
+                                    </div>
+                                </div>
+                                <div class="qualification__timeline">
+                                    <span class="timeline__point"></span>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <!-- Work Content -->
+                        <div class="qualification__content" id="work">
+                            <!-- <div class="qualification__empty">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                                <p>Đang tìm kiếm cơ hội đầu tiên!</p>
+                                <span>Sẵn sàng cho thực tập và công việc chính thức</span>
+                            </div> -->
+                            <div class="qualification__data">
+                                <div></div>
+                                <div class="qualification__timeline">
+                                    <span class="timeline__point"></span>
+                                    <span class="timeline__line"></span>
+                                </div>
+                                <div class="qualification__item">
+                                    <h4 class="qualification__title">Công Ty CP Công Nghệ và Dịch Vụ IMAP</h4>
+                                    <span class="qualification__subtitle">Software Developer</span>
+                                    <div class="qualification__calendar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        7/2025 — 2/2026
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__data">
+                                <div class="qualification__item">
+                                    <h4 class="qualification__title">Công ty TNHH QuestX</h4>
+                                    <span class="qualification__subtitle">Web Designer</span>
+                                    <div class="qualification__calendar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                        8/2024 — 12/2024
+                                    </div>
+                                </div>
+                                <div class="qualification__timeline">
+                                    <span class="timeline__point"></span>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- SKILLS -->
+
+        <!-- ===== SKILLS SECTION ===== -->
         <section class="skills section" id="skills">
-            <h2 class="section_title">Kĩ năng</h2>
-            <span class="section_subtitle">Trình độ kỹ thuật bản thân</span>
-            <div class="skills_container container grid">
-                <!-- SKILL 1 -->
-                <div class="skill_container skills_open">
-                    <div class="skills_header">
-                        <i class='fa fa-terminal skills_icon'></i>
-                        <div class="skills_group-name">
-                            <h1 class="skills_title">Lập trình</h1>
-                            <span class="skills_subtitle">Nhiều hơn 2 năm </span>
+            <h2 class="section__title reveal">
+                <span class="gradient-text">Kỹ năng</span>
+            </h2>
+            <p class="section__subtitle reveal">Tech Stack & Kỹ năng kỹ thuật</p>
+
+            <div class="skills__container container grid">
+                <!-- Programming Skills -->
+                <div class="skills__group open reveal" data-skills-group>
+                    <div class="skills__group-header">
+                        <div class="skills__group-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                         </div>
-                        <i class='fa fa-angle-down skills_btn'></i>
+                        <div>
+                            <h3 class="skills__group-title">Lập trình</h3>
+                            <span class="skills__group-subtitle">Hơn 2 năm kinh nghiệm</span>
+                        </div>
+                        <span class="skills__group-arrow" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
                     </div>
-                    <div class="skills_list grid">
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Ngôn ngữ lập trình</h3>
-                            </div>
-                            <div>
-                                <span class="skills_info">PHP, JavaScript, C#, Java, C++</span>
-                            </div>
-                        </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Khung chương trình</h3>
-                            </div>
-                            <div>
-                                <span class="skills_info">Laravel, React, Bootstrap, .NET</span>
-                            </div>
-                        </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Cơ sở dữ liệu</h3>
-                            </div>
-                            <div>
-                                <span class="skills_info">MySQL, SQL server, Microsoft access</span>
+                    <div class="skills__list">
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Ngôn ngữ lập trình</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card">
+                                    <span class="tech-card__name">PHP</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">JavaScript</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">C#</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">Java</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">C++</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Công cụ hỗ trợ</h3>
-                            </div>
-                            <div>
-                                <span class="skills_info">Github, Visual Studio, XamPP, Eclipse</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- SKILL 2 -->
-                <div class="skill_container skills_close">
-                    <div class="skills_header">
-                        <i class='fa fa-desktop skills_icon'></i>
-                        <div class="skills_group-name">
-                            <h1 class="skills_title">Tin học văn phòng</h1>
-                            <span class="skills_subtitle">Trung cấp</span>
-                        </div>
-                        <i class='fa fa-angle-down skills_btn'></i>
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Công cụ cộng tác trực tuyến</h3>
-                            </div>
-                            <div class="">
-                                <span>Google Drive, Zoom, Microsoft Teams.</span>
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Framework</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card">
+                                    <span class="tech-card__name">Laravel</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">React</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">MonoGame</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">.NET</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Phần mềm Microsoft Office</h3>
-                            </div>
-                            <div class="">
-                                <span>Word, Excel, Powerpoint.</span>
-                            </div>
-                        </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Thiết kế đồ họa</h3>
-                            </div>
-                            <div class="">
-                                <span>Adobe Photoshop, Canva.</span>
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Cơ sở dữ liệu</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card">
+                                    <span class="tech-card__name">MySQL</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">SQL Server</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Sử dụng tin nhắn</h3>
-                            </div>
-                            <div class="">
-                                <span>Email, Zalo, Messenger.</span>
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Công cụ</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card">
+                                    <span class="tech-card__name">Git & GitHub</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">VS Code</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">XAMPP</span>
+                                </div>
+                                <div class="tech-card">
+                                    <span class="tech-card__name">Unity & Godot</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- SKILL 3 -->
-                <div class="skill_container skills_close">
-                    <div class="skills_header">
-                        <i class='fa fa-comments skills_icon'></i>
-                        <div class="skills_group-name">
-                            <h1 class="skills_title">Kĩ năng mềm</h1>
-                            <span class="skills_subtitle">7.6/10</span>
+
+                <!-- Office Skills -->
+                <div class="skills__group reveal reveal-delay-1" data-skills-group>
+                    <div class="skills__group-header">
+                        <div class="skills__group-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                         </div>
-                        <i class='fa fa-angle-down skills_btn'></i>
+                        <div>
+                            <h3 class="skills__group-title">Tin học văn phòng</h3>
+                            <span class="skills__group-subtitle">Trung cấp</span>
+                        </div>
+                        <span class="skills__group-arrow" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
                     </div>
-                    <div class="skills_list grid">
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Giao tiếp</h3>
-                                <span class="skills_info">8/10</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_communication"></span>
-                            </div>
-                        </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Thuyết trình</h3>
-                                <span class="skills_info">7.5/10</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_present"></span>
+                    <div class="skills__list">
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Cộng tác trực tuyến</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card"><span class="tech-card__name">Google Drive</span></div>
+                                <div class="tech-card"><span class="tech-card__name">Zoom</span></div>
+                                <div class="tech-card"><span class="tech-card__name">MS Teams</span></div>
                             </div>
                         </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Giải quyết vấn đề</h3>
-                                <span class="skills_info">8/10</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_problem-solving"></span>
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Microsoft Office</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card"><span class="tech-card__name">Word</span></div>
+                                <div class="tech-card"><span class="tech-card__name">Excel</span></div>
+                                <div class="tech-card"><span class="tech-card__name">PowerPoint</span></div>
                             </div>
                         </div>
-                        <div class="skills_content">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Quản lí thời gian</h3>
-                                <span class="skills_info">7/10</span>
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Thiết kế</h4>
+                            <div class="tech-stack">
+                                <div class="tech-card"><span class="tech-card__name">Photoshop</span></div>
+                                <div class="tech-card"><span class="tech-card__name">Canva</span></div>
                             </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_time-management"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills__group reveal reveal-delay-2" data-skills-group>
+                    <div class="skills__group-header">
+                        <div class="skills__group-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="skills__group-title">Kỹ năng mềm</h3>
+                            <span class="skills__group-subtitle">Đánh giá cá nhân</span>
+                        </div>
+                        <span class="skills__group-arrow" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </div>
+                    <div class="skills__list">
+                        <div class="skills__soft-item">
+                            <div class="skills__soft-header">
+                                <span class="skills__soft-name">Giải quyết vấn đề</span>
+                                <span class="skills__soft-value">8/10</span>
+                            </div>
+                            <div class="skills__bar-track">
+                                <div class="skills__bar-fill" style="--bar-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skills__soft-item">
+                            <div class="skills__soft-header">
+                                <span class="skills__soft-name">Quản lý thời gian</span>
+                                <span class="skills__soft-value">8/10</span>
+                            </div>
+                            <div class="skills__bar-track">
+                                <div class="skills__bar-fill" style="--bar-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skills__soft-item">
+                            <div class="skills__soft-header">
+                                <span class="skills__soft-name">Giao tiếp</span>
+                                <span class="skills__soft-value">6.6/10</span>
+                            </div>
+                            <div class="skills__bar-track">
+                                <div class="skills__bar-fill" style="--bar-width: 66%"></div>
+                            </div>
+                        </div>
+                        <div class="skills__soft-item">
+                            <div class="skills__soft-header">
+                                <span class="skills__soft-name">Thuyết trình</span>
+                                <span class="skills__soft-value">7.7/10</span>
+                            </div>
+                            <div class="skills__bar-track">
+                                <div class="skills__bar-fill" style="--bar-width: 77%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- SERVICES -->
+
+        <!-- ===== SERVICES SECTION ===== -->
         <section class="services section" id="services">
-            <h2 class="section_title">Dịch vụ</h2>
-            <span class="section_subtitle">Những gì tôi cung cấp</span>
-            <div class="services_container container grid">
-                <!-- SERVICERS 1 -->
-                <div class="services_content">
-                    <div class="services_title">
-                        <i class="fa fa-code services_icon"></i>
-                        <h3 class="services_name">Fontend developer</h3>
+            <h2 class="section__title reveal">
+                <span class="gradient-text">Dịch vụ</span>
+            </h2>
+            <p class="section__subtitle reveal">Những gì tôi có thể mang lại</p>
+
+            <div class="services__container container grid">
+                <!-- Frontend Service -->
+                <div class="services__card reveal reveal-delay-1">
+                    <div class="services__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                     </div>
-                    <p class="services_description">Build and design the interface, responsive design for different devices, motion animations for actions.</p>
-                    <span class="button services_btn">
+                    <h3 class="services__name">Frontend Developer</h3>
+                    <p class="services__description">
+                        Xây dựng giao diện web hiện đại, responsive trên mọi thiết bị với animations mượt mà và trải nghiệm người dùng tốt nhất.
+                    </p>
+                    <button class="services__link" type="button">
                         Xem thêm
-                        <i class="fa fa-caret-right btn_icon"></i>
-                    </span>
-                    <div class="services_modal">
-                        <div class="modal_content">
-                            <h3 class="modal_title">Fontend developer</h3>
-                            <i class="fa fa-close modal_close"></i>
-                            <ul class="modal_services grid">
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    HTML & CSS Responsive Web Design
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-frontend-title">
+                        <div class="modal__content">
+                            <h3 class="modal__title" id="modal-frontend-title">Frontend Developer</h3>
+                            <button class="modal__close" aria-label="Đóng">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                            <ul class="modal__list">
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    HTML5 & CSS3 Responsive Web Design
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    Javascript Development
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    JavaScript & ES6+ Development
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    Node.js & ReactJS Development
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    React.js SPA Development
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    PSD to Bootstrap Services
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Bootstrap & UI Framework Integration
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- SERVICERS 2 -->
-                <div class="services_content">
-                    <div class="services_title">
-                        <i class="fa fa-server services_icon"></i>
-                        <h3 class="services_name">Backend developer</h3>
+
+                <!-- Backend Service -->
+                <div class="services__card reveal reveal-delay-2">
+                    <div class="services__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
                     </div>
-                    <p class="services_description">Xử lý các yêu cầu của web, truy cập vào dữ liệu từ cơ sở dữ liệu bằng sử dụng truy vấn SQL, lưu trữ và cập nhật hồ sơ có trong cơ sở dữ liệu</p>
-                    <span class="button services_btn">
+                    <h3 class="services__name">Backend Developer</h3>
+                    <p class="services__description">
+                        Xử lý logic nghiệp vụ, xây dựng API, quản lý cơ sở dữ liệu và đảm bảo hiệu suất hệ thống ổn định.
+                    </p>
+                    <button class="services__link" type="button">
                         Xem thêm
-                        <i class="fa fa-caret-right btn_icon"></i>
-                    </span>
-                    <div class="services_modal">
-                        <div class="modal_content">
-                            <h4 class="modal_title">Backend developer</h4>
-                            <i class="fa fa-close modal_close"></i>
-                            <ul class="modal_services grid">
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    Lập trình hướng đối tượng
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-backend-title">
+                        <div class="modal__content">
+                            <h3 class="modal__title" id="modal-backend-title">Backend Developer</h3>
+                            <button class="modal__close" aria-label="Đóng">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                            <ul class="modal__list">
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lập trình hướng đối tượng (OOP)
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    Lập trình theo mô hình MVC
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Mô hình MVC với Laravel Framework
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    PHP với khung chương trình laravel
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    C# với ASP.NET & Visual Studio
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    C# với khung chương trình asp.net & IDE visual studio
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Database Design & SQL Queries
                                 </li>
-                                <li class="modal_service">
-                                    <i class="fa fa-check-square-o modal_icon"></i>
-                                    JAVA với IDE eclipse
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engine Service -->
+                <div class="services__card reveal reveal-delay-2">
+                    <div class="services__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    </div>
+                    <h3 class="services__name">Game Developer</h3>
+                    <p class="services__description">
+                        Chuyển đổi các bản thiết kế, cốt truyện và ý tưởng thành một phần mềm trò chơi hoàn chỉnh, sẵn sàng phát hành trên nhiều nền tảng.
+                    </p>
+                    <button class="services__link" type="button">
+                        Xem thêm
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-game-title">
+                        <div class="modal__content">
+                            <h3 class="modal__title" id="modal-game-title">Game Developer</h3>
+                            <button class="modal__close" aria-label="Đóng">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                            <ul class="modal__list">
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lập trình Gameplay & Logic
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Framework: MonoGame
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Game Engine: Unity & Godot
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Platform Porting: PC & Mobile
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Service -->
+                <div class="services__card reveal reveal-delay-2">
+                    <div class="services__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    </div>
+                    <h3 class="services__name">Mobile Developer</h3>
+                    <p class="services__description">
+                        Thiết kế, xây dựng, thử nghiệm và bảo trì các ứng dụng phần mềm chạy trên điện thoại thông minh, máy tính bảng và các thiết bị di động khác.
+                    </p>
+                    <button class="services__link" type="button">
+                        Xem thêm
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-mobile-title">
+                        <div class="modal__content">
+                            <h3 class="modal__title" id="modal-mobile-title">Mobile Developer</h3>
+                            <button class="modal__close" aria-label="Đóng">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                            <ul class="modal__list">
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lập trình Native
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Lập trình Cross-Platform: React Native
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Tích hợp API và Hệ thống
+                                </li>
+                                <li class="modal__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="modal__item-icon"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Bảo trì và Nâng cấp
                                 </li>
                             </ul>
                         </div>
@@ -408,152 +642,185 @@
                 </div>
             </div>
         </section>
-        <!-- PROTFOLIO -->
-        <section class="section portfolio" id="protfolio">
-            <h2 class="section_title">Hồ sơ</h2>
-            <span class="section_subtitle">Một số dự án của tôi</span>
-            <div class="container portfolio_container swiper">
-                <div class="swiper-wrapper">
-                    <div class="portfolio_content swiper-slide">
-                        <div class="portfolio_card grid">
-                            <img src="img/bonsai_web.png" alt="" class="portfolio_img">
-                            <div class="portfolio_data">
-                                <h3 class="portfolio_title">Bonsai Website</h3>
-                                <p class="portfolio_description">Position: Frontend developver.<br>Using HTML5, CSS, Bootstrap, JavaScript, REACTJS.</p>
-                                <a href="#" class="button btn_flex portfolio_btn">
-                                    Source code
-                                    <i class="fa fa-arrow-circle-right btn_icon"></i>
-                                </a>
+
+        <!-- ===== PORTFOLIO SECTION ===== -->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title reveal">
+                <span class="gradient-text">Dự án</span>
+            </h2>
+            <p class="section__subtitle reveal">Một số dự án tiêu biểu</p>
+
+            <div class="portfolio__container container">
+                <div class="portfolio__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Project 1 -->
+                        <div class="swiper-slide">
+                            <div class="portfolio__card reveal">
+                                <div class="portfolio__img-wrapper">
+                                    <img src="img/bonsai_web.png" alt="Bonsai Website — Dự án Frontend" class="portfolio__img" loading="lazy" width="600" height="350">
+                                </div>
+                                <div class="portfolio__data">
+                                    <h3 class="portfolio__title">Bonsai Website</h3>
+                                    <p class="portfolio__description">Trang web giới thiệu và bán bonsai với giao diện đẹp mắt, responsive design.</p>
+                                    <div class="portfolio__techs">
+                                        <span class="portfolio__tech">HTML5</span>
+                                        <span class="portfolio__tech">CSS3</span>
+                                        <span class="portfolio__tech">Bootstrap</span>
+                                        <span class="portfolio__tech">JavaScript</span>
+                                        <span class="portfolio__tech">React</span>
+                                    </div>
+                                    <div class="portfolio__actions">
+                                        <span class="portfolio__role">Frontend Developer</span>
+                                        <a href="https://github.com/saimonyaky" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                                            Source Code
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="swiper-slide">
+                            <div class="portfolio__card reveal">
+                                <div class="portfolio__img-wrapper">
+                                    <img src="img/pc-component_web.png" alt="PC Component Website — Dự án Backend" class="portfolio__img" loading="lazy" width="600" height="350">
+                                </div>
+                                <div class="portfolio__data">
+                                    <h3 class="portfolio__title">PC Component Website</h3>
+                                    <p class="portfolio__description">Hệ thống bán linh kiện máy tính với quản lý sản phẩm, giỏ hàng và thanh toán.</p>
+                                    <div class="portfolio__techs">
+                                        <span class="portfolio__tech">PHP</span>
+                                        <span class="portfolio__tech">Laravel</span>
+                                        <span class="portfolio__tech">MySQL</span>
+                                        <span class="portfolio__tech">XAMPP</span>
+                                    </div>
+                                    <div class="portfolio__actions">
+                                        <span class="portfolio__role">Backend Developer</span>
+                                        <a href="https://github.com/saimonyaky" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                                            Source Code
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio_content swiper-slide">
-                        <div class="portfolio_card grid">
-                            <img src="img/pc-component_web.png" alt="" class="portfolio_img">
-                            <div class="portfolio_data">
-                                <h3 class="portfolio_title">PC Component Website</h3>
-                                <p class="portfolio_description">Position: Backend developver.<br>Using PHP, Xampp, MySQL, Laravel.</p>
-                                <a href="#" class="button btn_flex portfolio_btn">
-                                    Source code
-                                    <i class="fa fa-arrow-circle-right btn_icon"></i>
-                                </a>
-                            </div>
+                    <!-- Swiper Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title reveal">
+                <span class="gradient-text">Liên hệ</span>
+            </h2>
+            <p class="section__subtitle reveal">Hãy kết nối với tôi</p>
+
+            <div class="contact__container container grid">
+                <div class="contact__info reveal-left">
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="contact__card-title">Điện thoại</h3>
+                            <p class="contact__card-data">0852 654 116</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="contact__card-title">Email</h3>
+                            <p class="contact__card-data">nvtrung1605@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="contact__card-title">Địa chỉ</h3>
+                            <p class="contact__card-data">Trâu Quỳ — Gia Lâm — Hà Nội</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next">
-                    <i class="fa fa-angle-right portfolio_icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="fa fa-angle-left portfolio_icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <!-- CONTACT -->
-        <section class="section contact" id="contact">
-            <h2 class="section_title">Liên hệ</h2>
-            <span class="section_subtitle">Thông tin liên lạc</span>
-            <div class="container contact_container grid">
-                <table class="contact_address">
-                    <tr class="contact_info">
-                        <th>
-                            <i class="fa fa-phone-square contact_icon"></i>
-                        </th>
-                        <td>
-                            <h3 class="contact_title">Số điện thoại</h3>
-                            <span class="contact_subtitle">0852 654 116</span>
-                        </td>
-                    </tr>
-                    <tr class="contact_info">
-                        <th>
-                            <i class="fa fa-envelope-square contact_icon"></i>
-                        </th>
-                        <td>
-                            <h3 class="contact_title">Email</h3>
-                            <span class="contact_subtitle">nvtrung1605@gmail.com</span>
-                        </td>
-                    </tr>
-                    <tr class="contact_info">
-                        <th>
-                            <i class="fa fa-map-marker contact_icon"></i>
-                        </th>
-                        <td>
-                            <h3 class="contact_title">Địa chỉ</h3>
-                            <span class="contact_subtitle">Trâu Quỳ - Gia Lâm - Hà Nội</span>
-                        </td>
-                    </tr>
-                </table>
-                <form action="" class="contact_form grid">
-                    <div class="contact_inputs">
-                        <input type="text" class="contact_input" id="name" required>
-                        <label for="name" class="contact_label">Tên</label>
+
+                <form class="contact__form reveal-right" id="contact-form" novalidate>
+                    <div class="contact__input-group">
+                        <input type="text" class="contact__input" id="contact-name" placeholder=" " required autocomplete="name">
+                        <label for="contact-name" class="contact__label">Họ và tên</label>
                     </div>
-                    <div class="contact_inputs">
-                        <input type="text" class="contact_input" id="email" required>
-                        <label for="email" class="contact_label">Email</label>
+                    <div class="contact__input-group">
+                        <input type="email" class="contact__input" id="contact-email" placeholder=" " required autocomplete="email">
+                        <label for="contact-email" class="contact__label">Email</label>
                     </div>
-                    <div class="contact_inputs">
-                        <textarea type="text" class="contact_input" id="message" rows="7" required></textarea>
-                        <label for="message" class="contact_label">Message</label>
+                    <div class="contact__input-group">
+                        <textarea class="contact__input" id="contact-message" placeholder=" " rows="6" required></textarea>
+                        <label for="contact-message" class="contact__label">Tin nhắn</label>
                     </div>
-                    <div class="contact_btns">
-                        <button type="reset" class="button btn_flex contact_btn">
+                    <div class="contact__buttons">
+                        <button type="reset" class="btn btn--outline">
                             Làm lại
-                            <i class="fa fa-refresh btn_icon"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
                         </button>
-                        <button type="submit" class="button btn_flex contact_btn">
-                            Gửi
-                            <i class="fa fa-send btn_icon"></i>
+                        <button type="submit" class="btn btn--primary">
+                            Gửi tin nhắn
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                         </button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
-    <!-- FOOTER -->
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer" id="footer">
-        <div class="footer_bg">
-            <div class="footer_container container grid">
-                <div class="">
-                    <h2 class="footer_title">Trung</h2>
-                    <span class="footer_subtitle">Nhà phát triển trang web</span>
-                </div>
-                <ul class="footer_links">
-                    <li class="">
-                        <a href="#services" class="footer_link">Services</a>
-                    </li>
-                    <li class="">
-                        <a href="#protfolio" class="footer_link">Portfolio</a>
-                    </li>
-                    <li class="">
-                        <a href="#contact" class="footer_link">Contact</a>
-                    </li>
-                </ul>
-                <div class="social_footer">
-                    <a class="social_item facebook" href="#">
-                        <i class="fa fa-facebook-official social_icon"></i>
-                    </a>
-                    <a class="social_item youtube" href="#">
-                        <i class="fa fa-youtube-play social_icon"></i>
-                    </a>
-                    <a class="social_item twitter" href="#">
-                        <i class="fa fa-twitter social_icon"></i>
-                    </a>
-                    <a class="social_item gg_plus" href="#">
-                        <i class="fa fa-google-plus-official social_icon"></i>
-                    </a>
-                </div>
+        <div class="footer__container container grid">
+            <div class="footer__brand">
+                <h2 class="footer__title">
+                    <span class="gradient-text">Trung</span><span class="nav__logo-dot">.</span>
+                </h2>
+                <p class="footer__subtitle">Web Developer</p>
             </div>
-            <p class="copyright">&#169; NVTrung. All right reserved</p>
+
+            <ul class="footer__links">
+                <li><a href="#services" class="footer__link">Services</a></li>
+                <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/nguyễn-văn-trung-018196312/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com/saimonyaky" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://dribbble.com/Saimonyaky" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Dribbble">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                </a>
+            </div>
         </div>
+        <p class="footer__copy">&copy; 2024 Nguyễn Văn Trung. All rights reserved.</p>
     </footer>
 
-    <!-- SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button class="scroll-up" id="scroll-up" aria-label="Cuộn lên đầu trang">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
-    <!-- JS -->
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
