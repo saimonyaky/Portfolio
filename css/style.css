@@ -1406,28 +1406,73 @@ textarea {
 }
 
 /* ── Swiper overrides ── */
+.portfolio__swiper {
+  position: relative;
+  overflow: visible;
+  padding: 0 3rem;       /* room for nav buttons on the sides */
+}
+
+.portfolio__swiper .swiper-wrapper {
+  overflow: hidden;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--primary) !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 44px !important;
+  height: 44px !important;
   background-color: var(--bg-card);
   border-radius: var(--radius-full);
   border: 1px solid var(--glass-border);
   transition: all var(--transition);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
 }
 
+/* Position buttons OUTSIDE the slide area */
+.swiper-button-prev {
+  left: -0.5rem;
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+/* Replace Swiper's default arrows with custom chevrons */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  content: '' !important;
-  display: none !important;
+  font-size: 1rem !important;
+  font-weight: 700;
+}
+
+.swiper-button-next::after {
+  content: '›' !important;
+  display: block !important;
+  font-size: 1.6rem !important;
+  line-height: 1;
+}
+
+.swiper-button-prev::after {
+  content: '‹' !important;
+  display: block !important;
+  font-size: 1.6rem !important;
+  line-height: 1;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: var(--bg-card-hover);
+  background-color: var(--primary);
   border-color: var(--primary);
-  box-shadow: 0 4px 15px rgba(124, 92, 252, 0.2);
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(124, 92, 252, 0.35);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: var(--space-lg);
+  bottom: auto !important;
 }
 
 .swiper-pagination-bullet {
@@ -1908,10 +1953,8 @@ textarea.contact__input {
   position: relative;
 }
 
-.portfolio__swiper {
-  overflow: hidden;
-  padding-bottom: var(--space-2xl);
-}
+/* portfolio__swiper styles are in the Swiper overrides section */
+
 
 .portfolio__img-wrapper {
   overflow: hidden;
@@ -2147,6 +2190,24 @@ textarea.contact__input {
   .portfolio_img,
   .portfolio__img {
     height: 180px;
+  }
+
+  .portfolio__swiper {
+    padding: 0 2rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .swiper-button-prev {
+    left: -0.25rem;
+  }
+
+  .swiper-button-next {
+    right: -0.25rem;
   }
 }
 
